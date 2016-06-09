@@ -505,7 +505,7 @@ double rtl_source_c::get_center_freq( size_t chan )
 double rtl_source_c::set_freq_corr( double ppm, size_t chan )
 {
   if ( _dev )
-    rtlsdr_set_freq_correction( _dev, (int)ppm );
+    rtlsdr_set_freq_correction( _dev, ppm );
 
   return get_freq_corr( chan );
 }

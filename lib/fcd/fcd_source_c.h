@@ -93,7 +93,7 @@ private:
   gr::fcdproplus::fcdproplus::sptr _src_v2;
 #endif
   double _lna_gain, _mix_gain, _bb_gain, _freq;
-  int _correct;
+  double _correct;
 };
 
 #endif // FCD_SOURCE_C_H

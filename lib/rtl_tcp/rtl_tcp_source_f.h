@@ -114,7 +114,7 @@ public:
   void set_sample_rate(int sample_rate);
   void set_gain_mode(int manual);
   void set_gain(int gain);
-  void set_freq_corr(int ppm);
+  void set_freq_corr(double ppm);
   void set_if_gain(int stage, int gain);
   void set_agc_mode(int on);
   void set_direct_sampling(int on);

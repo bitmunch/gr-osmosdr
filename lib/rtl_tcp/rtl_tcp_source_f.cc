@@ -260,6 +260,7 @@ int rtl_tcp_source_f::work (int noutput_items,
 }
 
 #ifdef _WIN32
+
 #define __attribute__(x)
 #pragma pack(push, 1)
 #endif
@@ -295,7 +296,7 @@ void rtl_tcp_source_f::set_gain(int gain)
   send(d_socket, (const char*)&cmd, sizeof(cmd), 0);
 }
 
-void rtl_tcp_source_f::set_freq_corr(int ppm)
+void rtl_tcp_source_f::set_freq_corr(double ppm)
 {
   struct command cmd = { 0x05, htonl(ppm) };
   send(d_socket, (const char*)&cmd, sizeof(cmd), 0);

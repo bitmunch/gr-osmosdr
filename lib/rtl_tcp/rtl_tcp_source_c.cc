@@ -253,7 +253,7 @@ double rtl_tcp_source_c::get_center_freq( size_t chan )
 
 double rtl_tcp_source_c::set_freq_corr( double ppm, size_t chan )
 {
-  _src->set_freq_corr( int(ppm) );
+  _src->set_freq_corr( ppm );
 
   _corr = ppm;
 

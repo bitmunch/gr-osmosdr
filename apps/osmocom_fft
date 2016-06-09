@@ -834,13 +834,13 @@ class app_top_block(stdgui2.std_top_block, pubsub):
         if ppm is None:
             ppm = 0.0
             if self._verbose:
-                print "Using frequency corrrection of", ppm
+                print "Using frequency correction of %.1f" % ppm
             self[FREQ_CORR_KEY] = ppm
             return
 
         ppm = self.src.set_freq_corr(ppm)
         if self._verbose:
-            print "Set frequency correction to:", ppm
+            print "Set frequency correction to: %.1f" % ppm
 
 def main ():
     app = stdgui2.stdapp(app_top_block, "osmocom Spectrum Browser", nstatus=1)
